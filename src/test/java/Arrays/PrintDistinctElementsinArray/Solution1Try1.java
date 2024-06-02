@@ -6,7 +6,7 @@ public class Solution1Try1 {
     static void Finddistinct(int[] ar, int lenght) {
         Arrays.sort(ar);
         for (int i = 0; i < lenght; i++) {
-            while (i<lenght-1 && ar[i]==ar[i+1]);
+            while (i<lenght-1 && ar[i]==ar[i]+1);
                 i++;
             System.out.println(ar[i]+"");
 

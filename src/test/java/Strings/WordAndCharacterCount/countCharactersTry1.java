@@ -1,0 +1,20 @@
+package Strings.WordAndCharacterCount;
+
+public class countCharactersTry1 {
+    public static void main(String[] args) {
+        String str = "This is Sonali Charde";
+        count(str);
+    }
+    public static void count(String str){
+        char[] ch = str.toCharArray();
+        for (int i = 0; i< ch.length;i++){
+            String s = "";
+            while (i< ch.length && ch[i]!=' '){
+                s= s+ch[i];
+                i++;
+            }
+            if (s.length()>0)
+                System.out.println(s + "->" + s.length());
+        }
+    }
+}

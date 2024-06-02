@@ -1,25 +1,35 @@
 package Strings.RemoveDuplicates;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class Solution1 {
     public static void main(String[] args) {
-        String s = "SSonali";
-        String ans = "";
-        for (int i =0; i<=s.length(); i++){
-            char temp = s.charAt(i);
-            // checking for space in the string
-            if (temp != ' '){
-                // checking if the character is already
-                // present in the new String if not adding
-                // the character to the new string
-            if (ans.indexOf(temp)<=-1){
-                ans=ans+temp;
-            }
-            else {
-                ans =ans+' ';
-            }
-            }
-            ans = ans.trim();
-            System.out.println("Output : "+ans);
-        }
+        String s = "Sandeep";
+        int lenght = s.length();
+        removeDuplicates(s);
     }
-}
+
+    public static String removeDuplicates(String s) {
+        Set<Character> characterSetset = new HashSet<>();
+        StringBuffer sb = new StringBuffer();
+        for (int i = 0; i <= sb.length(); i++) {
+            Character c = s.charAt(i);
+            if (!characterSetset.contains(c)) {
+                characterSetset.add(c);
+                sb.append(s);
+            }
+        }
+            return sb.toString();
+        }
+
+    }
+
+
+
+
+
+
+
+
+
